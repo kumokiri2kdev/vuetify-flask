@@ -96,6 +96,18 @@ def get_memo(key):
 
     return res
 
+@app.route('/form', methods = ['POST', 'OPTIONS'])
+def post_form():
+    if request.method == "OPTIONS":
+        print('OPTIONS')
+        return ""
+
+    body = request.get_data().decode('utf-8')
+    print(body)
+    json_data = json.loads(body)
+    print(json_data)
+
+    return ""
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
