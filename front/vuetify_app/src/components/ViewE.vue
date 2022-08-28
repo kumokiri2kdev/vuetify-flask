@@ -24,6 +24,14 @@
           label="Outlined style"
           outlined
         ></v-select>
+        <v-radio-group v-model="radio_item">
+          <v-radio
+            v-for="n in 3"
+            :key="n"
+            :label="`Radio ${n}`"
+            :value="n"
+          ></v-radio>
+        </v-radio-group>
       </div>
       <div class="ma-auto text-right" style="max-width: 500px">
         <v-btn depressed
@@ -45,7 +53,8 @@
         slider: 0,
         input_text: '',
         seleced_item :'やらない',
-        items : ['やる', 'やらない', 'わからない']
+        items : ['やる', 'やらない', 'わからない'],
+        radio_item: 1
       }
     },
     methods: {
@@ -53,11 +62,13 @@
         console.log(this.slider)
         console.log(this.input_text)
         console.log(this.seleced_item)
+        console.log(this.radio_item)
         axios.post('http://localhost:5000/form',
           {
             text: this.input_text,
             val: this.slider,
-            selected: this.seleced_item
+            selected: this.seleced_item,
+            raido_selected: this.radio_item
           },
           {
             headers: {
