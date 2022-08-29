@@ -8,6 +8,7 @@ import ViewCDetail from './components/ViewC_Detail.vue'
 import ViewD from './components/ViewD.vue'
 import ViewDMemo from './components/ViewDMemo.vue'
 import ViewE from './components/ViewE.vue'
+import ViewF from './components/ViewF.vue'
 
 Vue.use(Router)
 
@@ -56,6 +57,11 @@ export default new Router({
       path: '/view_e',
       name: 'ViewE',
       component: ViewE
+    },
+    {
+      path: '/view_f',
+      name: 'ViewF',
+      component: ViewF
     },
   ]
 })

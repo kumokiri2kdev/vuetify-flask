@@ -100,6 +100,14 @@
         >
           <router-link to="/view_e">View E</router-link>
         </v-btn>
+        <v-btn
+          color="white"
+          text
+          rounded
+          class="my-2"
+        >
+          <router-link to="/view_f">View F</router-link>
+        </v-btn>
       </v-row>
     </v-footer>
   </v-app>
