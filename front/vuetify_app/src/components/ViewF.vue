@@ -9,7 +9,7 @@
       <ViewFChild
         v-for="(item, i) in items"
         :key="i"
-        @click="link_clicked(item.key)"
+        @item_click="item_clicked(item.key)"
         :key_val=item.key
         :title=item.title
       >
@@ -49,6 +49,9 @@
       set_content: function(content) {
         this.content = content;
         this.dialog = true;
+      },
+      item_clicked:function(key) {
+        console.log(key);
       }
     }
   }
